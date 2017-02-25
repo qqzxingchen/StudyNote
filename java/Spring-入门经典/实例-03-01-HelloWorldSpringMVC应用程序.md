@@ -65,7 +65,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
                 Servlet 在启动时，需要加载一个 xml 文件（就是之前定义bean的文件），以便获取 Spring 应用程序的上下文
                     Spring 应用程序的上下文，即 WebApplicationContext 的实现
                     WebApplicationContext接口，即一个继承自 ApplicationContext 接口的接口，提供以 Web 为中心的相关功能
-                默认情况下，将会找 WEB-INF/${serlvet-name}-servlet.xml 文件，对于本例来说，就是 WEB-INF/springmvc-servlet.xml 文件
+                默认情况下，将会找 WEB-INF/${servlet-name}-servlet.xml 文件，对于本例来说，就是 WEB-INF/springmvc-servlet.xml 文件
                 当然也可以手动指定该文件的路径，如下
             -->
             <param-name>contextConfigLocation</param-name>
@@ -87,7 +87,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
 ```
 
 
-* springmvc-serlvet.xml 文件
+* springmvc-servlet.xml 文件
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -128,7 +128,7 @@ public class HelloReaderController {
         mv.addObject("message", "Hello Reader!");
 
         // 这里指定 view 的名字为 helloReader 
-        // 由于 springmvc-serlvet.xml 中指定了视图名与视图文件的对照关系: ${prefix}${view-name}${suffix} （这里似乎大小写不敏感）
+        // 由于 springmvc-servlet.xml 中指定了视图名与视图文件的对照关系: ${prefix}${view-name}${suffix} （这里似乎大小写不敏感）
         // 即视图名 helloReader 将会与视图文件 /WEB-INF/pages/helloReader.jsp 文件对应
         mv.setViewName("helloReader");
         return mv;
