@@ -36,7 +36,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
         <artifactId>spring-web</artifactId>
         <version>4.0.5.RELEASE</version>
     </dependency>
-	<!-- Added for debugging purposes -->
+    <!-- Added for debugging purposes -->
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
@@ -53,11 +53,11 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
       version="3.1">
     <!-- 指定servlet信息 -->
-	<servlet>
-		<servlet-name>springmvc</servlet-name>
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
         <!-- 指定某 servlet 的入口地址为 org.springframework.web.servlet.DispatcherServlet -->
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
 
         <!-- init-param 节点元素是为了指定一些额外的值 -->
         <init-param>
@@ -72,17 +72,17 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
             <!-- 这个路径也是 WEB-INF/springmvc-servlet.xml 文件 --> 
             <param-value>classpath:springmvc-servlet.xml</param-value>
         </init-param>
-	</servlet>
+    </servlet>
 
     <!--
         一个tomcat只能有一个web.xml文件，但是有时候需要在一个tomcat中放多个servlet（web服务），
         因此就可以定义多个 servlet 节点元素，然后通过 url 的映射区分到底使用哪个servlet
     -->
-	<servlet-mapping>
+    <servlet-mapping>
         <!-- url以 .mvc 结尾的请求将会分发到 springmvc 这个 servlet 中 -->
-		<servlet-name>springmvc</servlet-name>
-		<url-pattern>*.mvc</url-pattern>
-	</servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>*.mvc</url-pattern>
+    </servlet-mapping>
 </web-app>
 ```
 
@@ -94,9 +94,9 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
-       					   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
-       					   http://www.springframework.org/schema/context
-       					   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+                              http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+                              http://www.springframework.org/schema/context
+                              http://www.springframework.org/schema/context/spring-context-4.0.xsd">
     <context:component-scan base-package="com.wiley.beginningspring.ch3" />
     <context:annotation-config />
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -122,7 +122,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloReaderController {
     @RequestMapping(value = "/hello")
     public ModelAndView sayHello() {
-    	ModelAndView mv = new ModelAndView();
+        ModelAndView mv = new ModelAndView();
 
         // 在 view 的上下文中，添加一个 k-v 
         mv.addObject("message", "Hello Reader!");
