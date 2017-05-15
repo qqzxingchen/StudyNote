@@ -11,7 +11,7 @@ def get_base_dir():
 
 # 这些目录下的文件将会被处理
 def get_executed_root_dirs():
-    return [ 'component_elasticsearch','docker','java','testmethods','小组件' ]
+    return [ 'component_elasticsearch','docker','java','测试方法','小组件' ]
 
 def get_summary_file_path():
     return 'SUMMARY.md'

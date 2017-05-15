@@ -1,5 +1,4 @@
 tmp/
 *.pyc
 _book/
-SUMMARY.md
-
+*.log
