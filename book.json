@@ -1,0 +1,10 @@
+
+{
+    "styles": {
+        "website": "_styles/style.css",
+        "ebook": "_styles/style.css",
+        "pdf": "_styles/style.css",
+        "mobi": "_styles/style.css",
+        "epub": "_styles/style.css"
+    }
+}
