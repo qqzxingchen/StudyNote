@@ -6,5 +6,18 @@
         "pdf": "_styles/style.css",
         "mobi": "_styles/style.css",
         "epub": "_styles/style.css"
+    },
+    "plugins":[
+        "prism",
+        "-highlight",
+        "expandable-chapters",
+        "book-summary-scroll-position-saver"
+    ],
+    "pluginsConfig": {
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        }
     }
 }
