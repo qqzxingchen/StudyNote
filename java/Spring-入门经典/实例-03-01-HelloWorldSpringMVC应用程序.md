@@ -4,11 +4,13 @@
 ### 试一试-Hello World Spring MVC 应用程序
 
 * 创建Maven项目
+
 ```bash
 mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=com.wiley.beginningspring -DartifactId=basic -DarchetypeCatalog=internal
 ```
 
 * 添加项目对 spring-webmvc 的依赖，以及 spring-webmvc 的依赖项： spring-core spring-beans spring-context spring-web
+
 ```xml
 <dependencies>
     <dependency>
@@ -47,6 +49,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
 ```
 
 * web.xml （ /webapp/WEB-INF/web.xml ）中使用 URL 映射定义 Dispatcher Servlet
+
 ```xml
  <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -88,6 +91,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
 
 
 * springmvc-servlet.xml 文件
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -110,6 +114,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=co
 ```
 
 * HelloReaderController.java 文件
+
 ```java
 ##### ${project_root}/src/main/java/com/wiley/beginningspring/ch3/controller/HelloReaderController.java
 package com.wiley.beginningspring.ch3.controller;
@@ -137,6 +142,7 @@ public class HelloReaderController {
 ```
 
 * helloReader.jsp
+
 ```html
 <html>
 <body>
@@ -146,6 +152,7 @@ public class HelloReaderController {
 ```
 
 * 部署
+
 ```bash
 # 首先需要将项目打包成war包
 $ mvn package

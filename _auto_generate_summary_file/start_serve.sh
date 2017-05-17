@@ -17,7 +17,7 @@ echo 'gitbook studynote: autogenerate success'
 
 # 启动服务
 cd ..
-nohup gitbook serve --port 3000 > gitbook_serve_log.log 2>&1 & 
+nohup gitbook serve --port 3000 --lrport 35728 > gitbook_serve_log.log 2>&1 & 
 echo 'gitbook studynote: gitbook serve success at http://localhost:3000/'
 
 
